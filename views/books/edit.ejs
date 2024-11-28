@@ -5,18 +5,13 @@
     <input type="text" name="name" id="name" value="M<%= book.name%>" />
     <br />
     <label for="yourFav">wanna update?</label>
-    <input
-      type="checkbox"
-      name="yourFav"
-      id="yourFav"
-      <%
-      if
-      (book.yourFav)
-      {%
-    />
-    checked <%}%>
+    <input type="checkbox" name="yourFav" id="yourFav" 
+    <% if (book.yourFav) {%>
+      checked
 
-    <br />
+    <%}%>
+    
+    <br>
     >
     <button type="Submit">update Book</button>
   </form>

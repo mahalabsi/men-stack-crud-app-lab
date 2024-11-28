@@ -43,8 +43,8 @@ app.post('/books', async (req, res) => {
 })
 
 app.get('/books', async (req, res) => {
-  const allBooks = await Book.find()
-  res.render('books/index.ejs', { books: allBooks })
+  const book = await Book.find()
+  res.render('books/index.ejs', { book })
 })
 
 app.get('/books/:bookId', async (req, res) => {
@@ -58,8 +58,8 @@ app.delete('/books/:bookId', async (req, res) => {
 })
 
 app.get('/books/:bookId/edit', async (req, res) => {
-  const theBook = await Book.findById(req.params.bookId)
-  res.render('theBook/edit.ejs', { fruit: theBook })
+  const book = await Book.findById(req.params.bookId)
+  res.render('books/edit.ejs', { book })
 })
 
 app.put('/books/:bookId', async (req, res) => {

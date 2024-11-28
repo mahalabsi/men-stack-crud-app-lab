@@ -8,7 +8,7 @@
   <body>
     <h1>book list</h1>
     <ul>
-      <% books.forEach(book => { %>
+      <% book.forEach(book => { %>
       <a href="/books/<%= book._id %>">
         <li><%= book.name %></li>
       </a>

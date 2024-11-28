@@ -7,7 +7,10 @@
   <%}%>
 
   <form action="/books/<%= book._id%>?_method=DELETE" method="post">
-    <button type="submit">Delete<%= fruit.name%></button>
+    <button type="submit">Delete<%= book.name%></button>
   </form>
   <a href="/books/<%= book._id%>/edit"> Edit <%= book.name %></a>
+  <a href="/books/new">Add More books  </a>
+  <a href="/books">  Browse Books </a>
+  
 </body>
