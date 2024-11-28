@@ -1,12 +1,13 @@
 <body>
   <h1><%= book.name%></h1>
   <% if(book.youFav){%>
-  <p>you dont want to delete this..</p>
+  <p>you don't want to delete this..</p>
   <%}else{%>
   <p>yes you do</p>
   <%}%>
-  <form action="/books/<%=book._id%>?_method=DELETE" method="POST">
-    <button type="submit">Delete <%= book.name %></button>
+
+  <form action="/books/<%= book._id%>?_method=DELETE" method="post">
+    <button type="submit">Delete<%= fruit.name%></button>
   </form>
-  <a href="/books">Back to the list</a>
+  <a href="/books/<%= book._id%>/edit">Edit <%= book.name %></a>
 </body>

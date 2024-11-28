@@ -1,0 +1,23 @@
+<body>
+  <h1>Edit <%= book.name%></h1>
+  <form action="/books/<%= book._id%>?_method=PUT" method="POST">
+    <label for="name"> Name: </label>
+    <input type="text" name="name" id="name" value="M<%= book.name%>" />
+    <br />
+    <label for="yourFav">wanna update?</label>
+    <input
+      type="checkbox"
+      name="yourFav"
+      id="yourFav"
+      <%
+      if
+      (book.yourFav)
+      {%
+    />
+    checked <%}%>
+
+    <br />
+    >
+    <button type="Submit">update Book</button>
+  </form>
+</body>
